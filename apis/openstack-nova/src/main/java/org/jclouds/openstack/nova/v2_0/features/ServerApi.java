@@ -214,7 +214,7 @@ public interface ServerApi {
    @POST
    @Path("/{id}/action")
    @Produces(MediaType.APPLICATION_JSON)
-   @Payload("%7B\"resize\":%7B\"flavorRef\":{flavorId}%7D%7D")
+   @Payload("%7B\"resize\":%7B\"flavorRef\":\"{flavorId}\"%7D%7D")
    void resize(@PathParam("id") String id, @PayloadParam("flavorId") String flavorId);
 
    /**
